@@ -8,6 +8,7 @@
 
 var assert = require('assert');
 var tzwhere = require('../lib/index');
+var util = require('util');
 
 var whiteHouse = {'lat': 38.897663, 'lng': -77.036562};
 
@@ -45,5 +46,9 @@ describe('Readme example', function () {
     assert((after - before) < (before - before2));
     assert(((after - before) / 23) === ((after2 - after) / 24));
     return done();
+  });
+  
+  after(function () {
+    console.log(util.inspect(process.memoryUsage()));
   });
 });
