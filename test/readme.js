@@ -1,0 +1,49 @@
+/* Mocha test
+   to use:
+     npm install mocha
+     mocha <filename>
+   or
+     npm test
+*/
+
+var assert = require('assert');
+var tzwhere = require('../lib/index');
+
+var whiteHouse = {'lat': 38.897663, 'lng': -77.036562};
+
+describe('Readme example', function () {
+  it('should properly determine the timezone of the White House', function (done) {
+    // This test will also test the callback for those who prefer the async flow.
+    tzwhere.tzNameAt(whiteHouse['lat'], whiteHouse['lng'], function (error, result) {
+      if (error) {
+        return done(error);
+      }
+      console.log(result);
+      assert(result === 'America/New_York');
+      return done();
+    });
+  });
+  
+  it('should properly determine the UTC offset of the White House\'s timezone', function (done) {
+    var offset = tzwhere.tzOffsetAt(whiteHouse['lat'], whiteHouse['lng']);
+    console.log(offset);
+    assert(offset === -18000000);
+    return done();
+  });
+  
+  it('should properly determine the times on either side of daylight savings', function (done) {
+    // Warning, JS Date has zero-indexed months.
+    var before2 = tzwhere.dateAt(whiteHouse['lat'], whiteHouse['lng'], 2012, 02, 10, 0, 0, 0, 0);
+    console.log(before2.toString());
+    var before = tzwhere.dateAt(whiteHouse['lat'], whiteHouse['lng'], 2012, 02, 11, 0, 0, 0, 0);
+    console.log(before.toString());
+    var after = tzwhere.dateAt(whiteHouse['lat'], whiteHouse['lng'], 2012, 02, 12, 0, 0, 0, 0);
+    console.log(after.toString());
+    var after2 = tzwhere.dateAt(whiteHouse['lat'], whiteHouse['lng'], 2012, 02, 13, 0, 0, 0, 0);
+    console.log(after2.toString());
+    assert((before - before2) === (after2 - after));
+    assert((after - before) < (before - before2));
+    assert(((after - before) / 23) === ((after2 - after) / 24));
+    return done();
+  });
+});
