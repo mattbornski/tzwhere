@@ -29,7 +29,7 @@
     "geolib"
   ],
   "dependencies": {
-    "geolib": "git+http://github.com/mattbornski/Geolib.git",
+    "geolib": "git://github.com/mattbornski/Geolib.git",
     "time": "0.8.0"
   },
   "devDependencies": {
