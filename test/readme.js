@@ -28,7 +28,8 @@ describe('Readme example', function () {
   it('should properly determine the UTC offset of the White House\'s timezone', function (done) {
     var offset = tzwhere.tzOffsetAt(whiteHouse['lat'], whiteHouse['lng']);
     console.log(offset);
-    assert(offset === -18000000);
+    // TODO determine which is correct based on the current state of DST in Eastern time.
+    assert(offset === -14400000 || offset === -18000000);
     return done();
   });
   
@@ -47,7 +48,7 @@ describe('Readme example', function () {
     assert(((after - before) / 23) === ((after2 - after) / 24));
     return done();
   });
-  
+
   after(function () {
     console.log(util.inspect(process.memoryUsage()));
   });

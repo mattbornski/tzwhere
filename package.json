@@ -30,6 +30,7 @@
   ],
   "dependencies": {
     "geolib": "git://github.com/mattbornski/Geolib.git",
+    "simplesets": "1.2.0",
     "time": "0.8.0"
   },
   "devDependencies": {
