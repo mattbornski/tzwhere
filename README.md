@@ -1,4 +1,4 @@
-# tzwhere by google over NodeJs [![Build Status](http://travis-ci.org/mattbornski/tzwhere.png)](http://travis-ci.org/mattbornski/tzwhere)
+# tzwhere [![Build Status](http://travis-ci.org/mattbornski/tzwhere.png)](http://travis-ci.org/mattbornski/tzwhere)
 
 Determine timezone from lat/long in NodeJS
 
