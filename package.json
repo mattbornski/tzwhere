@@ -1,8 +1,8 @@
 {
-  "author": "Matt Bornski",
+  "author": "mattbornski",
   "name": "tzwhere",
   "description": "Determine timezone from lat/long",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
@@ -26,7 +26,9 @@
     "node": ">= 0.6"
   },
   "bundleDependencies": [
-    "geolib"
+    "geolib",
+    "simplesets",
+    "time"
   ],
   "dependencies": {
     "geolib": "git://github.com/mattbornski/Geolib.git",
@@ -34,7 +36,7 @@
     "time": "0.8.0"
   },
   "devDependencies": {
-    "mocha": "0.14.x"
+    "mocha": "1.x"
   },
   "scripts": {
     "test": "mocha"
