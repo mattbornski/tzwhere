@@ -7,7 +7,6 @@
 */
 
 var assert = require('assert');
-require('date-utils');
 var tzwhere = require('../lib/index');
 var util = require('util');
 
