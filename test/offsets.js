@@ -17,6 +17,8 @@ describe('Known timezones', function () {
     var la = tzwhere.dateIn(2012, 3, 1, 0, 0, 0, 0, 'America/Los_Angeles');
     assert(+ny + 1 * 3600 * 1000 === +chicago);
     assert(+ny + 3 * 3600 * 1000 === +la);
+    assert(+la === 1333263600000);
+    assert(+ny === 1333252800000);
     return done();
   });
   
