@@ -2,7 +2,7 @@
   "author": "mattbornski",
   "name": "tzwhere",
   "description": "Determine timezone from lat/long",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
@@ -33,7 +33,7 @@
   "dependencies": {
     "geolib": "git://github.com/manuelbieh/Geolib.git",
     "simplesets": "1.2.0",
-    "time": "0.8.0"
+    "time": "0.8.1"
   },
   "devDependencies": {
     "mocha": "1.x"
