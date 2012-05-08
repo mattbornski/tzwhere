@@ -3,3 +3,4 @@ test/
 node_modules/
 .npmignore
 .travis.yml
+*.log
