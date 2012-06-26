@@ -2,7 +2,7 @@
   "author": "mattbornski",
   "name": "tzwhere",
   "description": "Determine timezone from lat/long",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
