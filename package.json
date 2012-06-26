@@ -1,5 +1,8 @@
 {
   "author": "mattbornski",
+  "contributors": [
+    "Alan Gutierrez <alan@prettyrobots.com> (http://github.com/bigeasy)"
+  ],
   "name": "tzwhere",
   "description": "Determine timezone from lat/long",
   "version": "0.0.9",
