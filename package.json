@@ -31,7 +31,7 @@
   "dependencies": {
     "geolib": "git://github.com/manuelbieh/Geolib.git",
     "simplesets": "1.2.0",
-    "timezone": "0.0.14"
+    "timezone": "0.0.16"
   },
   "devDependencies": {
     "mocha": "1.x"
