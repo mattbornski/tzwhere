@@ -10,6 +10,8 @@ var assert = require('assert');
 var tzwhere = require('../lib/index');
 var util = require('util');
 
+tzwhere.init();
+
 describe('Coverage checker', function () {
   it('should be able to identify distinct timezones at a high percentage of locations at 48°N', function (done) {
     var results = {};
@@ -44,7 +46,7 @@ describe('Coverage checker', function () {
     assert(continents['America'] > continents['Europe']);
     return done();
   });
-  
+
   it('should find appropriate timezones and offsets in Australia', function (done) {
     var results = {};
     for (var latitude = -30; latitude <= -22; latitude++) {
@@ -65,7 +67,7 @@ describe('Coverage checker', function () {
     }
     return done();
   });
-  
+
   after(function () {
     console.log(util.inspect(process.memoryUsage()));
   });
