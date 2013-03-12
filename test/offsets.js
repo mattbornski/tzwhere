@@ -10,6 +10,8 @@ var assert = require('assert');
 var tzwhere = require('../lib/index');
 var util = require('util');
 
+tzwhere.init();
+
 describe('Known timezones', function () {
   it('should return knowns deltas', function (done) {
     var ny = tzwhere.dateIn(2012, 3, 1, 0, 0, 0, 0, 'America/New_York');
@@ -21,7 +23,7 @@ describe('Known timezones', function () {
     assert(+ny === 1333252800000);
     return done();
   });
-  
+
   after(function () {
     console.log(util.inspect(process.memoryUsage()));
   });

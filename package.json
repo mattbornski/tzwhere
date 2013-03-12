@@ -37,6 +37,6 @@
     "mocha": "1.x"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "for i in `ls test/*.js`; do mocha $i; done"
   }
 }
