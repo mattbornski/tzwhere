@@ -18,7 +18,10 @@ npm install tzwhere
 
 ```javascript
 var tzwhere = require('tzwhere')
+tzwhere.init();
+// OR
+tzwhere.init('path/to/alternative/tz/file');
 
-// 
+//
 
 ```

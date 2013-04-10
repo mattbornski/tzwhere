@@ -10,6 +10,7 @@ var assert = require('assert');
 var tzwhere = require('../lib/index');
 var util = require('util');
 
+tzwhere.init();
 var whiteHouse = {'lat': 38.897663, 'lng': -77.036562};
 
 describe('Readme example', function () {
@@ -24,7 +25,7 @@ describe('Readme example', function () {
       return done();
     });
   });
-  
+
   it('should properly determine the UTC offset of the White House\'s timezone', function (done) {
     var offset = tzwhere.tzOffsetAt(whiteHouse['lat'], whiteHouse['lng']);
     console.log(offset);
@@ -32,7 +33,7 @@ describe('Readme example', function () {
     assert(offset === -14400000 || offset === -18000000);
     return done();
   });
-  
+
   it('should properly determine the times on either side of daylight savings', function (done) {
     // Warning, JS Date has zero-indexed months.
     var before2 = tzwhere.dateAt(whiteHouse['lat'], whiteHouse['lng'], 2012, 02, 10, 0, 0, 0, 0);

@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature",
+      "properties": {
+        "TZID": "Europe\/Berlin"
+      },
+      "geometry": {
+        "type": "Polygon", "coordinates": [ [
+          [ -180.0, -90.0],
+          [ 180.0, -90.0],
+          [ 180.0, 90.0],
+          [ -180.0, 90.0] ] ]
+      }
+    }
+  ]
+}
+

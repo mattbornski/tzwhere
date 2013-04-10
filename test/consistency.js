@@ -10,6 +10,7 @@ var assert = require('assert');
 var tzwhere = require('../lib/index');
 var util = require('util');
 
+tzwhere.init();
 var targetLocation = {'lat': 38.649005786109, 'lng': -121.51802471851};
 var targetDateString = '01/01/2012';
 
