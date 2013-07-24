@@ -62,3 +62,7 @@ tzwhere.init('path/to/alternative/tz/file');
 ```
 
 Check the tests for more comprehensive usage, including determining the timezone offsets at arbitrary dates (very useful for scheduling future events expressed in local time).
+
+## License
+
+tzwhere is free software, and is distributed under the terms of the MIT license (see LICENSE.txt).
