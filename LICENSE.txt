@@ -1,4 +1,6 @@
-Copyright 2013 Matt Bornski and other contributors
+The MIT License (MIT)
+
+Copyright (c) 2013 Matt Bornski and other contributors
 https://github.com/mattbornski/tzwhere
 
 Permission is hereby granted, free of charge, to any person obtaining
