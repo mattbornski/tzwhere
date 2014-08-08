@@ -52,6 +52,15 @@ tzwhere.tzNameAt(whiteHouse['lat'], whiteHouse['lng'], function (error, result) 
 ...
 ```
 
+If your queries are only within a certain region you can optimize the instantiation of this library by creating regional GeoJSON shape files from the one included.
+```javascript
+var tzwhere = require('tzwhere')
+tzwhere.createRegionalGEOJsonShapeFile( 'America' );
+```
+
+You will only need to do this once and then would include the regional GeoJSON file in your distributions.  See the example below for how to use this file.
+
+
 You can also pass alternative GeoJSON shape files:
 
 ```javascript
