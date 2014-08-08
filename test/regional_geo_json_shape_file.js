@@ -12,7 +12,7 @@ var assert = require('assert');
 var tzwhere = require('../lib/index');
 var util = require('util');
 
-describe.only( 'Create regional GEOJson shape file', function () {
+describe( 'Create regional GEOJson shape file', function () {
     it( 'should throw an error if no region passed in', function (done) {
         try {
             tzwhere.createTimeZoneSubsetWorldFile();
