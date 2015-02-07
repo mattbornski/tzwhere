@@ -15,7 +15,7 @@ var util = require('util');
 describe( 'Create regional GEOJson shape file', function () {
     it( 'should throw an error if no region passed in', function (done) {
         try {
-            tzwhere.createTimeZoneSubsetWorldFile();
+            tzwhere.createRegionalGEOJsonShapeFile();
             assert( false );
         }
         catch (err) {
@@ -26,7 +26,7 @@ describe( 'Create regional GEOJson shape file', function () {
 
     it( 'should throw an empty region is passed in ', function (done) {
         try {
-            tzwhere.createTimeZoneSubsetWorldFile( '' );
+            tzwhere.createRegionalGEOJsonShapeFile( '' );
             assert( false );
         }
         catch (err) {
@@ -36,6 +36,7 @@ describe( 'Create regional GEOJson shape file', function () {
     });
 
     it( 'should be able to create the regional file and query the white house', function (done) {
+        this.timeout(10000);
         tzwhere.createRegionalGEOJsonShapeFile( 'America' );
         var fs = require( 'fs' );
         fs.exists( 'tz_America.json', function( exists ) {
