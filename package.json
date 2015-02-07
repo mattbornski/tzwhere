@@ -44,7 +44,6 @@
     "time-grunt": "^0.4.0"
   },
   "scripts": {
-    "pretest": "npm i grunt",
     "test": "./node_modules/.bin/grunt test"
   }
 }
