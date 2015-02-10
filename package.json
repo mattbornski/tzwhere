@@ -6,9 +6,9 @@
   ],
   "name": "tzwhere",
   "description": "Determine timezone from lat/long",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/index.js",
-  "directories" : {
+  "directories": {
     "lib": "lib",
     "test": "test"
   },
@@ -30,14 +30,21 @@
     "node": ">= 0.6"
   },
   "dependencies": {
-    "geolib": "1.2.5",
+    "geolib": "1.x",
     "simplesets": "1.2.0",
-    "timezone": "0.0.19"
+    "timezone": "0.x"
   },
   "devDependencies": {
-    "mocha": "1.x"
+    "blanket": "^1.1.6",
+    "grunt": "0.4.xgit ",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-test": "^0.11.0",
+    "load-grunt-tasks": "^0.6.0",
+    "mocha": "^1.21.4",
+    "time-grunt": "^0.4.0"
   },
   "scripts": {
-    "test": "for i in `ls test/*.js`; do mocha $i; done"
+    "test": "./node_modules/.bin/grunt test"
   }
 }
