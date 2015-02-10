@@ -14,7 +14,7 @@ var util = require('util');
 var everythingEuropeTzFile = path.join(__dirname + '/../lib/fake_tz_world.json');
 var somelocation = {'lat': 40.0, 'lng': 80.0};
 
-describe('Provide alternative tz world file', function () {
+describe.skip('Provide alternative tz world file', function () {
   it('should get the timezone information from the alternative file', function (done) {
     tzwhere.init(everythingEuropeTzFile);
     tzwhere.tzNameAt(somelocation['lat'], somelocation['lng'], function (error, result) {
