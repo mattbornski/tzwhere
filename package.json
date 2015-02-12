@@ -31,18 +31,18 @@
   },
   "dependencies": {
     "geolib": "1.x",
-    "simplesets": "1.2.0",
+    "simplesets": "1.2.x",
     "timezone": "0.x"
   },
   "devDependencies": {
-    "blanket": "^1.1.6",
-    "grunt": "0.4.xgit ",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-mocha-test": "^0.11.0",
-    "load-grunt-tasks": "^0.6.0",
-    "mocha": "^1.21.4",
-    "time-grunt": "^0.4.0"
+    "blanket": "1.x",
+    "grunt": "0.4.x",
+    "grunt-cli": "0.1.x",
+    "grunt-contrib-watch": "0.6.x",
+    "grunt-mocha-test": "0.11.x",
+    "load-grunt-tasks": "0.6.x",
+    "mocha": "1.21.x",
+    "time-grunt": "0.4.x"
   },
   "scripts": {
     "test": "./node_modules/.bin/grunt test"
