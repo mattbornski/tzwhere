@@ -30,9 +30,9 @@
     "node": ">= 0.6"
   },
   "dependencies": {
-    "geolib": "1.2.5",
-    "simplesets": "1.2.0",
-    "timezone": "0.0.19"
+    "geolib": "1.x",
+    "simplesets": "1.x",
+    "timezone": "0.x"
   },
   "devDependencies": {
     "mocha": "1.x"
