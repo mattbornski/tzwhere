@@ -2,6 +2,8 @@
 
 Determine timezone from lat/long in NodeJS
 
+## TODO: fix tests
+
 ## Installation
 
 ### Installing tzwhere
@@ -62,6 +64,16 @@ tzwhere.init('path/to/alternative/tz/file');
 ```
 
 Check the tests for more comprehensive usage, including determining the timezone offsets at arbitrary dates (very useful for scheduling future events expressed in local time).
+
+## Caching in cluster
+If application runs in cluster mode, tzwhere can proper handle it. In case of no cache, first worker makes the lock file and starts data calculation. When data is calculated, process write it in the cache file and removes the lock file. Other workers watching for the lock file changes and when its gone, them trying to load data from cache. So only one worker makes calculations, and other reuses its result. If cache exists, each worker tries to load it.
+
+## Events
+`tzwhere` is a EventEmitter itself and it emits data loading progression  
+* `loading` - starting data load  
+* `loaded` – data loaded. Provides an object `{ from: 'Source of load: cache|calc', time: ms }`  
+* `lock` - data calculating in another process. Provides an object `{ state: 'watching|unlock', time: ms }`  
+* `error` - provides an error object
 
 ## License
 
