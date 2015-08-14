@@ -1,2 +1,4 @@
 node_modules/
 *.log
+lib/shortcuts.json
+lib/shortcuts.lock
