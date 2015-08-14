@@ -73,6 +73,7 @@ If application runs in cluster mode, tzwhere can proper handle it. In case of no
 * `loading` - starting data load  
 * `loaded` – data loaded. Provides an object `{ from: 'Source of load: cache|calc', time: ms }`  
 * `lock` - data calculating in another process. Provides an object `{ state: 'watching|unlock', time: ms }`  
+* `cache` - modified cache. Provides an object `{ state: 'saved', time: ms }`  
 * `error` - provides an error object
 
 ## License
