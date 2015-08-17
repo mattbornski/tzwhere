@@ -64,8 +64,9 @@ tzwhere.init('path/to/alternative/tz/file');
 Also you can pass options to init method:
 ```javascript
 var tzwhere = require('tzwhere')
-tzwhere.init(undefined, {
-  tmpDir: '/usr/lib/tzwhere' // storage for shortcuts of lock and cache. default: __dirname
+tzwhere.init({
+  tzFile: '/usr/lib/tzwhere/tz.json', // timezone data. default: './lib/tz_world.json'
+  tmpDir: '/usr/lib/tzwhere' // storage for shortcuts of lock and cache. default: './lib'
 });
 ```
 

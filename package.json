@@ -6,7 +6,7 @@
   ],
   "name": "tzwhere",
   "description": "Determine timezone from lat/long",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "directories" : {
     "lib": "lib",
