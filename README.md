@@ -1,5 +1,3 @@
-# tzwhere [![Build Status](https://travis-ci.org/mattbornski/tzwhere.png)](http://travis-ci.org/mattbornski/tzwhere)
-
 Determine timezone from lat/long in NodeJS
 
 ## TODO: fix tests
@@ -61,6 +59,14 @@ var tzwhere = require('tzwhere')
 tzwhere.init('path/to/alternative/tz/file');
 
 ...
+```
+
+Also you can pass options to init method:
+```javascript
+var tzwhere = require('tzwhere')
+tzwhere.init(undefined, {
+  tmpDir: '/usr/lib/tzwhere' // storage for shortcuts of lock and cache. default: __dirname
+});
 ```
 
 Check the tests for more comprehensive usage, including determining the timezone offsets at arbitrary dates (very useful for scheduling future events expressed in local time).
