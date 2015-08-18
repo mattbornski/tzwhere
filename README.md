@@ -1,6 +1,6 @@
-# tzwhere [![Build Status](https://travis-ci.org/mattbornski/tzwhere.png)](http://travis-ci.org/mattbornski/tzwhere)
-
 Determine timezone from lat/long in NodeJS
+
+## TODO: fix tests
 
 ## Installation
 
@@ -61,7 +61,27 @@ tzwhere.init('path/to/alternative/tz/file');
 ...
 ```
 
+Also you can pass options to init method:
+```javascript
+var tzwhere = require('tzwhere')
+tzwhere.init({
+  tzFile: '/usr/lib/tzwhere/tz.json', // timezone data. default: './lib/tz_world.json'
+  tmpDir: '/usr/lib/tzwhere' // storage for shortcuts of lock and cache. default: './lib'
+});
+```
+
 Check the tests for more comprehensive usage, including determining the timezone offsets at arbitrary dates (very useful for scheduling future events expressed in local time).
+
+## Caching in cluster
+If application runs in cluster mode, tzwhere can proper handle it. In case of no cache, first worker makes the lock file and starts data calculation. When data is calculated, process write it in the cache file and removes the lock file. Other workers watching for the lock file changes and when its gone, them trying to load data from cache. So only one worker makes calculations, and other reuses its result. If cache exists, each worker tries to load it.
+
+## Events
+`tzwhere` is a EventEmitter itself and it emits data loading progression  
+* `loading` - starting data load  
+* `loaded` – data loaded. Provides an object `{ from: 'Source of load: cache|calc', time: ms }`  
+* `lock` - data calculating in another process. Provides an object `{ state: 'watching|unlock', time: ms }`  
+* `cache` - modified cache. Provides an object `{ state: 'saved', time: ms }`  
+* `error` - provides an error object
 
 ## License
 
