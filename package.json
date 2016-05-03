@@ -32,7 +32,7 @@
   "dependencies": {
     "geolib": "1.2.5",
     "simplesets": "1.2.0",
-    "timezone": "0.0.19"
+    "timezone": "0.0.48"
   },
   "devDependencies": {
     "mocha": "1.x"
