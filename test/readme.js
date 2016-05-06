@@ -50,6 +50,22 @@ describe('Readme example', function () {
     return done();
   });
 
+  it('should determine nearest time zone for the sea coordinate', function (done) {
+    var seaPlace = {'lat': 56.1460, 'lng': 5.1120};
+    tzwhere.tzNameAt(seaPlace['lat'], seaPlace['lng'], function (error, result) {
+      if (error) {
+        return done(error);
+      }
+      // tzNameAt should find nothing
+      assert(result === null);
+      // tzNameNear should find nearest place
+      var result = tzwhere.tzNameNear(seaPlace['lat'], seaPlace['lng']);
+      assert(result['tz'] === 'Europe/Oslo');
+      console.log(result['tz'] + ' ' + result['data']['distance']);
+      return done();
+    });
+  });
+
   after(function () {
     console.log(util.inspect(process.memoryUsage()));
   });
