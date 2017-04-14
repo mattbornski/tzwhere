@@ -1,6 +1,10 @@
-# tzwhere [![Build Status](https://travis-ci.org/mattbornski/tzwhere.png)](http://travis-ci.org/mattbornski/tzwhere) [![Donate to this project using Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](http://patreon.com/mattbornski) [![Donate to this project using Gratipay](https://img.shields.io/badge/gratipay-donate-yellow.svg)](https://www.gratipay.com/mattbornski)
+# tzwhere [![Build Status](https://travis-ci.org/mattbornski/tzwhere.png)](http://travis-ci.org/mattbornski/tzwhere)
 
 Determine timezone from lat/long in NodeJS
+
+## CALL FOR MAINTAINERS
+
+I am no longer actively working on this project and review PRs about once every three or four months.  If you believe you'd be a good maintainer of this project, please get in touch.
 
 ## Installation
 
