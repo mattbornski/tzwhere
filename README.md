@@ -2,6 +2,13 @@
 
 Determine timezone from lat/long in NodeJS
 
+## PROBABLY DON'T USE THIS IN NEW PROJECTS
+
+It probably still works!  But, timezone boundaries actually change over time, and this hasn't been updated in a while.  Also, bugs are discovered over time, and in this particular library, they're not fixed anymore!  New language features are added over time, and this library makes no attempt to take advantage of them!  Until somebody puts in the time to polish this up I would recommend you don't start a new project using it.  Here's a library that looks like it does the same thing but has an active maintainer:
+
+https://github.com/evansiroky/node-geo-tz
+https://www.npmjs.com/package/geo-tz
+
 ## CALL FOR MAINTAINERS
 
 I am no longer actively working on this project and review PRs about once every three or four months.  If you believe you'd be a good maintainer of this project, please get in touch.
